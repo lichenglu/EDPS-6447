@@ -7,12 +7,36 @@ function declareHello() {
   return;
 }
 
+function printHello() {
+  console.log("Hello World");
+  console.log("How are you!?");
+}
+
+function printHelloTo(name) {
+  console.log("Hello " + name)
+}
+
+printHelloTo("Genevieve");
+printHelloTo("Camden");
+
+printHelloTo("Laura")
+
+
 // This is a function expression
-var expressHello = function() { 
+var expressHello = () => { 
   console.log("Hello, I am a function expression.");
   console.log("-----------------------------------");
   return;
 };
+
+const printHelloAgain = (name, gender) => {
+  // our function logic here
+  console.log("Hello " + name + " (" + gender + ")")
+}
+
+printHelloAgain("Natalia", "female") // Hello Natalia (female)
+printHelloAgain("Jiwon", "female") // Hello Jiwon (female)
+printHelloAgain("Jordan", "male") // Hello Jordan (male)
 
 // Functions must be called to execute
 declareHello(); 

@@ -22,7 +22,7 @@ function sayLions() {
 function sayTigers() {
   console.log("and " + animal + " and "); 
   return;
-}
+} 
 
 // TODO: The variable 'bears' should only declared once and 'sayBears' should return "Bears! OH MY!". 
 var bears = "Bears";

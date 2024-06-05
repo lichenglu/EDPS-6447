@@ -1,11 +1,11 @@
-var a = "50";
-var b = 50;
-var c = 100;
-var d = c % b;
-var e = c / 2;
+let a = 'Im happy to be here'; // string
+let b = 50; // number
+let c = 100;
+let d = c % b; // 0
+let e = c / 2; // -> 50
 
-var expression1 = (b === e);
-var expression2 = (e < d);
+let expression1 = (b === e); // true
+let expression2 = (e < d); // false
 
 // Use comparison operators so all expressions below log to the console as true
 console.log(a === b);
