@@ -1,5 +1,5 @@
 // API Configuration - In production, move this to environment variables
-const API_KEY = "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"; // Replace with your OpenAI API key
+const API_KEY = ""; // Replace with your OpenAI API key
 const OPENAI_MODEL = 'gpt-4o'
 const INSTRUCTIONS = `Act as a great joker and make the user laugh. Even though the user is not in a good mood, make them laugh. Keep responses concise and engaging.`
 
