@@ -27,3 +27,23 @@ console.log(names[3]);
 
 // We use the array's length property to determine how many elements are in the array
 console.log(names.length);
+
+let chengluProfile = {
+    firstName: "Chenglu",
+    lastName: "Li",
+    email: "chenglu.li@utah.edu",
+    age: 32
+}
+
+const students = [
+    { hairColor: 'black', gender: 'male' },
+    { hairColor: 'red', gender: 'female' },
+    { hairColor: 'white', gender: 'male' },
+    { hairColor: 'yellow', gender: 'female' },
+]
+
+const filteredStudents = students.filter(student => {
+    if (student.gender === "male") return true
+})
+
+console.log(filteredStudents)

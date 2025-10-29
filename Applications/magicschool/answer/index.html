@@ -10,7 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="../index.css" />
   </head>
   <body>
     <!-- 
@@ -30,37 +30,28 @@
           placeholder="7th-grade"
         />
       </div>
-      <!-- 
-      TODO - TASK 1: Add the "Number of Questions" form field
-      Create a div with class "mb-3" containing:
-      - A label with for="numQuestions" and class="form-label" with text "Number of Questions"
-      - An input with type="number", class="form-control", id="numQuestions", placeholder="4"
-      -->
-        <div class="mb-3">
-          <label for="numQuestions" class="form-label">Number of Questions</label>
-          <input 
-            type="number"
-            class="form-control"
-            id="numQuestions"
-            placeholder="4"
-          />
-        </div>
-        
-        <div class="mb-3">
-          <label for="purpose" class="form-label">Assessment Purpose</label>
-          <input type="text" 
+      <div class="mb-3">
+        <label for="numQuestions" class="form-label"
+          >Number of Questions</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="numQuestions"
+          placeholder="4"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="purpose" class="form-label"
+          >Assessment Purpose</label
+        >
+        <input
+          type="text"
           class="form-control"
           id="purpose"
-          placeholer="'Torture' my students"
-          />
-        </div>
-
-      <!-- 
-      TODO - TASK 2: Add the "Assessment Purpose" form field  
-      Create a div with class "mb-3" containing:
-      - A label with for="purpose" and class="form-label" with text "Assessment Purpose"
-      - An input with type="text", class="form-control", id="purpose", placeholder="'Torture' my students"
-      -->
+          placeholder="'Torture' my students"
+        />
+      </div>
       <div class="mb-3">
         <label for="assessmentExample" class="form-label">Example Assessment</label>
         <textarea
@@ -72,22 +63,13 @@
       </div>
       <div class="d-flex justify-content-end mb-3">
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-          <button type="button" id="reset" class="btn btn-danger">Reset</button>
-          <button type="button" id="submit" class="btn btn-warning">Submit</button>
+            <button type="button" id="reset" class="btn btn-danger">Reset</button>
+            <button type="button" id="submit" class="btn btn-warning">Submit</button>
         </div>
       </div>
-      <!-- 
-      TODO - TASK 3: Add the results card section
-      Create a div with class "card" containing:
-      - A nested div with class "card-body"
-      - Inside that div, add a div with classes "card-text" and id="generation"
-      - The inner div should contain the text: "Waiting for assessment to be generated"
-      -->
       <div class="card">
         <div class="card-body">
-          <div class="card-text" id="generation">
-            Waiting for assessment to be generated
-          </div>
+          <div class="card-text" id="generation">Waiting for assessment to be generated</div>
         </div>
       </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

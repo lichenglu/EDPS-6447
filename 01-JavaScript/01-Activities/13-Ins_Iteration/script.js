@@ -11,3 +11,19 @@ var zooAnimals = ["Bears", "Giraffes", "Penguins", "Meerkats"];
 for (var i = 0; i < zooAnimals.length; i++) { 
     console.log("I am going to zoo to see " + zooAnimals[i] + ".");
 }
+
+let students = [
+    { age: 32 },
+    { age: 18 },
+    { age: 22 },
+]
+
+let totalAge = 0
+for (var i = 0; i < students.length; i ++) {
+    totalAge += students[i].age
+}
+
+let avgAge = totalAge / students.length
+
+console.log(totalAge, avgAge)
+

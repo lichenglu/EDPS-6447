@@ -6,10 +6,16 @@
 
 // This is to only run our script when the browser has finished loading the page
 $(() => {
+
+  // Which of the following is an official stroke order rule for writing Chinese characters?
+  // A. Write curves before straight lines
+  // B. Start from the bottom and write upward
+  // C. Horizontal strokes before vertical strokes (Correct)
+  // D. Write dots last in every characterX
+
   // This is to listen to Submit btn click
   $("#submit").click(() => {
     const gradeLevel = $("#gradeLevel").val();
-    // TODO: Follow grade level, get the input values for the rest of the variables
     const numQuestions = $("#numQuestions").val();
     const purpose = $("#purpose").val();
     const assessmentExample = $("#assessmentExample").val();
@@ -38,31 +44,25 @@ $(() => {
   // This is to listen to Reset btn click
   $("#reset").click(() => {
     console.log("reset");
-    // TODO: Use the jquery handler so that we can set their values to empty strings
-    $("#gradeLevel").val("")
-    $("#numQuestions").val("")
-    $("#purpose").val("")
-    $("#assessmentExample").val("")
+    $("#gradeLevel").val("");
+    $("#numQuestions").val("");
+    $("#purpose").val("");
+    $("#assessmentExample").val("");
     $("#generation").html("Waiting for assessment to be generated").removeClass("generation-loading");
   });
 
   // Here is how we send a prompt to OpenAI and receive a streaming response
   const sendPromptToOpenAI = async (numQuestions, gradeLevel, purpose, assessmentExample) => {
     const promptTemplate = `
-    Generate ${numQuestions}-question assessment for ${gradeLevel} grade students that will ${purpose} based on the assessment example below:
+    Imagine three different teachers are creating an ${numQuestions}-question assessment for ${gradeLevel} that will ${purpose}. 
+    
+    Each teacher will discuss their thinking about creating the assessment based on validity, reliability, authenticity, and fairness. They will collaboratively choose the best version based on the discussion. Include the thinking in your output. Then the teachers will go on to the next section, etc
+
+    Now output the thoughts and assessment based on the assessment example below
     ---
     ${assessmentExample}
-    ---
-    Generate the assessment items using the JSON structure
-    {
-      questionBody: string;
-      optionA: string;
-      optionB: string;
-      optionC: string;
-      optionD: string; // This is optional
-    }
     `
-
+    
     try {
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: "POST",

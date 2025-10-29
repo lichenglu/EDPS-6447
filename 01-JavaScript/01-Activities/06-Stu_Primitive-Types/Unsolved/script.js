@@ -1,9 +1,9 @@
-var one = 64;
-var two = "656302";
-var three = false;
-var four = 64.55;
-var five = "Howdy!";
-var six;
+let one = 64;
+let two = "656302";
+let three = false;
+let four = 64.55;
+let five = "Howdy!";
+let six;
 
 // Insert comments to explain what each console log below will log to the console
 console.log(typeof one); 

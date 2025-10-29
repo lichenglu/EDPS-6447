@@ -19,3 +19,9 @@ passwordBtnEl.on('dblclick', function () {
   var newPassword = passwordGenerator(15);
   passwordDisplayEl.text(newPassword);
 });
+
+// TODO: Add an event listener using "on" so that we trigger a function when passwordBtnEl is double clicked
+
+// TODO: Within the function, we will trigger passwordGenerator and get a 15-character password, save the password as a variable "newPassword"
+
+// TODO: then change the text of passwordDisplayEl using the newly generated password
